@@ -34,7 +34,8 @@ const UserList = ({ users }) => {
     console.log("Eliminar");
     const lastUser = usersList[usersList.length -1];
     setUsersList((prevUsersList)=> {
-      return prevUsersList.filter((usersList) => usersList !== lastUser);
+      prevUsersList.pop();
+      return [...prevUsersList];
     });
 
   }
